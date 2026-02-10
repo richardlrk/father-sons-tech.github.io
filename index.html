@@ -1,0 +1,1609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Father & Sons Tech | AI & Tech News</title>
+    <style>
+        /* ===== CSS RESET & VARIABLES ===== */
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #121212;
+            --bg-tertiary: #1a1a1a;
+            --bg-card: rgba(30, 30, 30, 0.6);
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0a0;
+            --text-muted: #666666;
+            --accent: #d4a574;
+            --accent-hover: #e8c9a0;
+            --accent-glow: rgba(212, 165, 116, 0.3);
+            --border: rgba(255, 255, 255, 0.08);
+            --success: #00d26a;
+            --gradient-dark: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ===== UTILITIES ===== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .accent {
+            color: var(--accent);
+        }
+
+        /* ===== SPARKLE DECORATION ===== */
+        .sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 50%;
+            animation: sparkle 2s ease-in-out infinite;
+        }
+
+        .sparkle::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            transform: translate(-50%, -50%);
+            border: 1px solid var(--accent-glow);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+            50% { transform: translate(-50%, -50%) scale(1.5); opacity: 0; }
+        }
+
+        /* ===== NAVIGATION ===== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 20px 0;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .logo .accent {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav-cta {
+            padding: 10px 24px;
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .nav-cta:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .mobile-toggle span {
+            width: 24px;
+            height: 2px;
+            background: var(--text-primary);
+            transition: all 0.3s ease;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 120px 0 80px;
+            background: var(--gradient-dark);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 30% 20%, rgba(212, 165, 116, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            font-size: 0.875rem;
+            color: var(--accent);
+            margin-bottom: 32px;
+        }
+
+        .hero-badge::before {
+            content: '✦';
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            letter-spacing: -1px;
+        }
+
+        .hero h1 .accent {
+            background: linear-gradient(135deg, var(--accent) 0%, #f0d9b5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            margin-bottom: 60px;
+        }
+
+        .btn {
+            padding: 16px 32px;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--bg-primary);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px var(--accent-glow);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        /* Trust Bar */
+        .trust-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            padding: 24px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .trust-icon {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-tertiary);
+            border-radius: 8px;
+            font-size: 1.2rem;
+        }
+
+        /* Sparkle decorations */
+        .hero-sparkle {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: var(--accent);
+            border-radius: 50%;
+            box-shadow: 0 0 20px var(--accent-glow);
+        }
+
+        .hero-sparkle:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
+        .hero-sparkle:nth-child(2) { top: 60%; left: 85%; animation-delay: 0.5s; }
+        .hero-sparkle:nth-child(3) { top: 30%; right: 15%; animation-delay: 1s; }
+        .hero-sparkle:nth-child(4) { top: 70%; left: 20%; animation-delay: 1.5s; }
+
+        /* ===== FEATURED SECTION ===== */
+        .featured {
+            background: var(--bg-secondary);
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .news-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            backdrop-filter: blur(20px);
+            transition: all 0.4s ease;
+        }
+
+        .news-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(212, 165, 116, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .news-thumbnail {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--bg-tertiary) 0%, #2a2a3e 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .news-thumbnail::before {
+            content: '📰';
+            font-size: 4rem;
+            opacity: 0.5;
+        }
+
+        .news-content {
+            padding: 24px;
+        }
+
+        .news-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .news-tag {
+            padding: 4px 12px;
+            background: rgba(212, 165, 116, 0.1);
+            border: 1px solid rgba(212, 165, 116, 0.2);
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .news-time {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .news-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .news-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+        }
+
+        .news-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: gap 0.3s ease;
+        }
+
+        .news-link:hover {
+            gap: 10px;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            padding: 40px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .stat-badge {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 4px 10px;
+            background: rgba(0, 210, 106, 0.1);
+            border: 1px solid rgba(0, 210, 106, 0.2);
+            border-radius: 50px;
+            font-size: 0.75rem;
+            color: var(--success);
+        }
+
+        /* ===== ACHIEVEMENTS SECTION ===== */
+        .achievements {
+            background: var(--gradient-dark);
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .achievement-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            backdrop-filter: blur(20px);
+            transition: all 0.4s ease;
+        }
+
+        .achievement-card:hover {
+            border-color: rgba(212, 165, 116, 0.3);
+            box-shadow: 0 0 40px var(--accent-glow);
+        }
+
+        .achievement-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(212, 165, 116, 0.1);
+            border-radius: 16px;
+            font-size: 2rem;
+        }
+
+        .achievement-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .achievement-label {
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .achievement-growth {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            background: rgba(0, 210, 106, 0.1);
+            border-radius: 50px;
+            font-size: 0.875rem;
+            color: var(--success);
+        }
+
+        /* ===== PRICING SECTION ===== */
+        .pricing {
+            background: var(--bg-secondary);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            align-items: stretch;
+        }
+
+        .pricing-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 40px 32px;
+            backdrop-filter: blur(20px);
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--accent);
+            box-shadow: 0 0 40px var(--accent-glow);
+            position: relative;
+        }
+
+        .pricing-card.featured::before {
+            content: 'Recommended';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 6px 16px;
+            background: var(--accent);
+            color: var(--bg-primary);
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .pricing-header {
+            text-align: center;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 24px;
+        }
+
+        .pricing-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .pricing-price {
+            font-size: 3rem;
+            font-weight: 800;
+        }
+
+        .pricing-price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--text-secondary);
+        }
+
+        .pricing-features {
+            list-style: none;
+            flex: 1;
+            margin-bottom: 32px;
+        }
+
+        .pricing-features li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-features li::before {
+            content: '✓';
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        .pricing-btn {
+            width: 100%;
+            padding: 16px;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .pricing-card:not(.featured) .pricing-btn {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+        }
+
+        .pricing-card:not(.featured) .pricing-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .pricing-card.featured .pricing-btn {
+            background: var(--accent);
+            color: var(--bg-primary);
+        }
+
+        .pricing-card.featured .pricing-btn:hover {
+            background: var(--accent-hover);
+        }
+
+        /* ===== TESTIMONIALS SECTION ===== */
+        .testimonials {
+            background: var(--gradient-dark);
+        }
+
+        .testimonials-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonials-track {
+            display: flex;
+            gap: 24px;
+            transition: transform 0.5s ease;
+        }
+
+        .testimonial-card {
+            flex: 0 0 calc(33.333% - 16px);
+            min-width: 320px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 32px;
+            backdrop-filter: blur(20px);
+        }
+
+        .testimonial-content {
+            margin-bottom: 24px;
+        }
+
+        .testimonial-quote {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .testimonial-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent) 0%, #f0d9b5 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--bg-primary);
+        }
+
+        .testimonial-info h4 {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .testimonial-info p {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        /* Testimonial Navigation */
+        .testimonial-nav {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 32px;
+        }
+
+        .testimonial-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-dot.active {
+            background: var(--accent);
+            border-color: var(--accent);
+        }
+
+        /* ===== FAQ SECTION ===== */
+        .faq {
+            background: var(--bg-secondary);
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin-bottom: 16px;
+            overflow: hidden;
+            backdrop-filter: blur(20px);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1rem;
+            font-weight: 500;
+            text-align: left;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            color: var(--accent);
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+
+        .faq-answer-content {
+            padding: 0 24px 24px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--bg-primary);
+            padding: 80px 0 40px;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .footer-brand .logo {
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+
+        .footer-brand p {
+            color: var(--text-secondary);
+            max-width: 300px;
+        }
+
+        .footer-newsletter {
+            margin-top: 20px;
+        }
+
+        .footer-newsletter h4 {
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .footer-newsletter form {
+            display: flex;
+            gap: 8px;
+        }
+
+        .footer-newsletter input {
+            flex: 1;
+            padding: 12px 16px;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+        }
+
+        .footer-newsletter input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .footer-newsletter button {
+            padding: 12px 20px;
+            background: var(--accent);
+            border: none;
+            border-radius: 8px;
+            color: var(--bg-primary);
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .footer-newsletter button:hover {
+            background: var(--accent-hover);
+        }
+
+        .footer-links h4 {
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 40px;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-bottom p {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 16px;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-tertiary);
+            border-radius: 10px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background: var(--accent);
+            color: var(--bg-primary);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .nav-cta {
+                display: none;
+            }
+
+            .mobile-toggle {
+                display: flex;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+            }
+
+            .trust-bar {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .trust-item {
+                flex: 0 0 calc(50% - 10px);
+                justify-content: center;
+            }
+
+            .stats-bar {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .testimonial-card {
+                flex: 0 0 100%;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+        }
+
+        /* ===== ANIMATIONS ===== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobile Navigation */
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 70px;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 10, 0.98);
+            padding: 20px;
+            border-bottom: 1px solid var(--border);
+            z-index: 999;
+        }
+
+        .mobile-nav.active {
+            display: block;
+        }
+
+        .mobile-nav .nav-links {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .mobile-nav .nav-cta {
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Father & Sons <span class="accent">Tech</span></a>
+            <ul class="nav-links">
+                <li><a href="#featured">News</a></li>
+                <li><a href="#achievements">Impact</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <button class="nav-cta">Subscribe</button>
+            <button class="mobile-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <ul class="nav-links">
+            <li><a href="#featured">News</a></li>
+            <li><a href="#achievements">Impact</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#faq">FAQ</a></li>
+        </ul>
+        <button class="nav-cta">Subscribe</button>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-sparkle"></div>
+        <div class="hero-sparkle"></div>
+        <div class="hero-sparkle"></div>
+        <div class="hero-sparkle"></div>
+        <div class="container">
+            <div class="hero-content fade-in">
+                <span class="hero-badge">AI-Powered Tech Journalism</span>
+                <h1>Stay <span class="accent">Ahead</span> in AI & Tech</h1>
+                <p class="hero-subtitle">Your daily source for breaking AI news, tech trends, and innovation insights</p>
+                <div class="hero-cta">
+                    <a href="#featured" class="btn btn-primary">Read Latest</a>
+                    <a href="#pricing" class="btn btn-secondary">Subscribe</a>
+                </div>
+                <div class="trust-bar">
+                    <div class="trust-item">
+                        <span class="trust-icon">🟣</span>
+                        <span>OpenAI</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon">🔵</span>
+                        <span>Google</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon">🟦</span>
+                        <span>Meta</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon">🟢</span>
+                        <span>NVIDIA</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon">🟣</span>
+                        <span>Microsoft</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section id="featured" class="section featured">
+        <div class="container">
+            <h2 class="section-title">AI News That Delivers <span class="accent">Real Insights</span></h2>
+            <p class="section-subtitle">Curated stories that matter for tech enthusiasts and professionals</p>
+            <div class="news-grid">
+                <article class="news-card fade-in">
+                    <div class="news-thumbnail"></div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-tag">Breaking</span>
+                            <span class="news-time">5 min read</span>
+                        </div>
+                        <h3>OpenAI Announces GPT-5: What We Know So Far</h3>
+                        <p>The next generation of AI models promises unprecedented reasoning capabilities...</p>
+                        <a href="#" class="news-link">Read More →</a>
+                    </div>
+                </article>
+                <article class="news-card fade-in">
+                    <div class="news-thumbnail"></div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-tag">Analysis</span>
+                            <span class="news-time">8 min read</span>
+                        </div>
+                        <h3>The State of AI in 2025: Trends Shaping the Future</h3>
+                        <p>From autonomous agents to multimodal systems, here's what定义 the year ahead...</p>
+                        <a href="#" class="news-link">Read More →</a>
+                    </div>
+                </article>
+                <article class="news-card fade-in">
+                    <div class="news-thumbnail"></div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-tag">Tutorial</span>
+                            <span class="news-time">12 min read</span>
+                        </div>
+                        <h3>Building AI-Powered Apps: A Complete Guide</h3>
+                        <p>Learn how to integrate LLMs into your applications with practical code examples...</p>
+                        <a href="#" class="news-link">Read More →</a>
+                    </div>
+                </article>
+            </div>
+            <div class="stats-bar fade-in">
+                <div class="stat-item">
+                    <div class="stat-value">500+</div>
+                    <div class="stat-label">Articles Published</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">50K+</div>
+                    <div class="stat-label">Monthly Readers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">15K+</div>
+                    <div class="stat-label">Newsletter Subscribers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">AI</div>
+                    <div class="stat-label">Powered by AI-curated content</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="section achievements">
+        <div class="container">
+            <h2 class="section-title">Trusted by <span class="accent">Tech Enthusiasts</span></h2>
+            <p class="section-subtitle">Our community continues to grow as more readers discover the value of AI-powered tech journalism</p>
+            <div class="achievements-grid">
+                <div class="achievement-card fade-in">
+                    <div class="achievement-icon">📚</div>
+                    <div class="achievement-number" data-target="500">0</div>
+                    <div class="achievement-label">+ Articles Published</div>
+                    <div class="achievement-growth">↑ 150% this year</div>
+                </div>
+                <div class="achievement-card fade-in">
+                    <div class="achievement-icon">👥</div>
+                    <div class="achievement-number" data-target="50">0</div>
+                    <div class="achievement-label">K+ Monthly Readers</div>
+                    <div class="achievement-growth">↑ 200% growth</div>
+                </div>
+                <div class="achievement-card fade-in">
+                    <div class="achievement-icon">📧</div>
+                    <div class="achievement-number" data-target="15">0</div>
+                    <div class="achievement-label">K+ Newsletter Subscribers</div>
+                    <div class="achievement-growth">↑ 85% this quarter</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section pricing">
+        <div class="container">
+            <h2 class="section-title">Flexible <span class="accent">Plans</span></h2>
+            <p class="section-subtitle">Choose the plan that fits your needs</p>
+            <div class="pricing-grid">
+                <div class="pricing-card fade-in">
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Free</h3>
+                        <div class="pricing-price">$0<span>/mo</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Daily headlines delivered</li>
+                        <li>Basic article access</li>
+                        <li>Community forum access</li>
+                    </ul>
+                    <button class="pricing-btn">Get Started</button>
+                </div>
+                <div class="pricing-card featured fade-in">
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Pro</h3>
+                        <div class="pricing-price">$19<span>/mo</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Everything in Free</li>
+                        <li>Full article access</li>
+                        <li>AI-powered summaries</li>
+                        <li>Weekly newsletter</li>
+                        <li>Early access to reports</li>
+                    </ul>
+                    <button class="pricing-btn">Start Free Trial</button>
+                </div>
+                <div class="pricing-card fade-in">
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Premium</h3>
+                        <div class="pricing-price">$39<span>/mo</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Everything in Pro</li>
+                        <li>Exclusive deep-dive reports</li>
+                        <li>Direct author access</li>
+                        <li>Monthly webinars</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <button class="pricing-btn">Get Premium</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section testimonials">
+        <div class="container">
+            <h2 class="section-title">What <span class="accent">Readers</span> Say</h2>
+            <p class="section-subtitle">Join thousands of tech enthusiasts who trust us for AI news</p>
+            <div class="testimonials-container">
+                <div class="testimonials-track">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-quote">"Father & Sons Tech has become my go-to source for AI news. The AI summaries save me hours every week."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">JD</div>
+                            <div class="testimonial-info">
+                                <h4>John Doe</h4>
+                                <p>Software Engineer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-quote">"The depth of analysis here is unmatched. Finally, tech journalism that actually explains the 'why' behind the news."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">SM</div>
+                            <div class="testimonial-info">
+                                <h4>Sarah Miller</h4>
+                                <p>Product Manager</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-quote">"As a developer, I appreciate the technical accuracy. The tutorials are well-researched and practical."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">AK</div>
+                            <div class="testimonial-info">
+                                <h4>Alex Kim</h4>
+                                <p>ML Engineer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-quote">"The premium reports have given me insights I couldn't find anywhere else. Worth every penny."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">RL</div>
+                            <div class="testimonial-info">
+                                <h4>Rachel Lee</h4>
+                                <p>Tech Investor</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-quote">"Clean design, quality content, no fluff. Exactly what I need to stay informed in a busy world."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">MP</div>
+                            <div class="testimonial-info">
+                                <h4>Mike Peterson</h4>
+                                <p>CTO</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-quote">"The daily newsletter is perfectly curated. It never feels overwhelming but always keeps me updated."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">EW</div>
+                            <div class="testimonial-info">
+                                <h4>Emma Wilson</h4>
+                                <p>Data Scientist</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-nav">
+                    <span class="testimonial-dot active" data-index="0"></span>
+                    <span class="testimonial-dot" data-index="1"></span>
+                    <span class="testimonial-dot" data-index="2"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section faq">
+        <div class="container">
+            <h2 class="section-title">Your Questions <span class="accent">Answered</span></h2>
+            <p class="section-subtitle">Everything you need to know about our platform</p>
+            <div class="faq-list">
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        <span>What makes Father & Sons Tech different from other tech news sites?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            We combine human expertise with AI-powered curation to deliver accurate, in-depth analysis that you won't find anywhere else. Our team of tech journalists and AI specialists work together to bring you stories that truly matter.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        <span>Can I try before subscribing to a paid plan?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Yes! Our Free plan gives you access to daily headlines and basic articles. We also offer a 7-day free trial for our Pro plan so you can experience all premium features before committing.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        <span>How does the AI-powered content curation work?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Our AI system scans thousands of sources daily to identify the most relevant and impactful stories. Human editors then verify and contextualize this information to ensure accuracy and depth.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        <span>Can I cancel my subscription at any time?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Absolutely. You can cancel your subscription at any time from your account settings. You'll continue to have access until the end of your billing period.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">Father & Sons <span class="accent">Tech</span></a>
+                    <p>Your trusted source for AI and technology news, delivering insights that matter.</p>
+                    <div class="footer-newsletter">
+                        <h4>Subscribe to our newsletter</h4>
+                        <form onsubmit="event.preventDefault(); alert('Thanks for subscribing!');">
+                            <input type="email" placeholder="Enter your email" required>
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Latest News</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="#">Reports</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Father & Sons Tech. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" title="Twitter">𝕏</a>
+                    <a href="#" title="LinkedIn">in</a>
+                    <a href="#" title="GitHub">⌘</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const mobileNav = document.querySelector('.mobile-nav');
+
+        mobileToggle.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
+            mobileToggle.classList.toggle('active');
+        });
+
+        // Smooth Scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    mobileNav.classList.remove('active');
+                }
+            });
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                const isActive = item.classList.contains('active');
+
+                // Close all items
+                document.querySelectorAll('.faq-item').forEach(faq => {
+                    faq.classList.remove('active');
+                });
+
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Animated Counters
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16);
+
+            function update() {
+                start += increment;
+                if (start < target) {
+                    element.textContent = Math.floor(start).toLocaleString() + (element.dataset.suffix || '+');
+                    requestAnimationFrame(update);
+                } else {
+                    element.textContent = target.toLocaleString() + (element.dataset.suffix || '+');
+                }
+            }
+
+            update();
+        }
+
+        // Testimonials Carousel
+        const track = document.querySelector('.testimonials-track');
+        const dots = document.querySelectorAll('.testimonial-dot');
+        let currentSlide = 0;
+
+        function updateCarousel() {
+            const cardWidth = document.querySelector('.testimonial-card').offsetWidth + 24;
+            track.style.transform = `translateX(-${currentSlide * cardWidth}px)`;
+
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSlide = index;
+                updateCarousel();
+            });
+        });
+
+        // Intersection Observer for Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+
+                    // Trigger counter animation for achievement cards
+                    if (entry.target.classList.contains('achievement-card')) {
+                        const counter = entry.target.querySelector('.achievement-number');
+                        if (counter && !counter.dataset.animated) {
+                            counter.dataset.animated = 'true';
+                            const target = parseInt(counter.dataset.target);
+                            animateCounter(counter, target);
+                        }
+                    }
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Auto-advance testimonials
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % 3;
+            updateCarousel();
+        }, 5000);
+
+        // Navbar scroll effect
+        let lastScroll = 0;
+        const navbar = document.querySelector('.navbar');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > 100) {
+                navbar.style.background = 'rgba(10, 10, 10, 0.98)';
+            } else {
+                navbar.style.background = 'rgba(10, 10, 10, 0.8)';
+            }
+
+            lastScroll = currentScroll;
+        });
+    </script>
+</body>
+</html>
