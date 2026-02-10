@@ -1,1832 +1,610 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Father & Sons Tech | AI News, OpenClaw Updates & Tech Trends</title>
-    <meta name="description" content="Your daily source for AI news, OpenClaw updates, and breaking tech trends. Get AI-curated insights, tutorials, and innovation news.">
-    <meta name="keywords" content="AI news, OpenClaw, artificial intelligence, tech trends, machine learning, LLM, automation, AI tools, technology updates">
-    <meta name="author" content="Father & Sons Tech">
-    <meta name="robots" content="index, follow, nocache">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Father & Sons Tech | AI News & OpenClaw Updates">
-    <meta property="og:description" content="Your daily source for AI news, OpenClaw updates, and breaking tech trends. AI-curated insights delivered.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://richardlrk.github.io/father-sons-tech.github.io/">
-    <meta property="og:image" content="https://richardlrk.github.io/father-sons-tech.github.io/og-image.jpg">
-    <meta property="og:site_name" content="Father & Sons Tech">
-    <meta property="og:locale" content="en_US">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Father & Sons Tech | AI News & OpenClaw">
-    <meta name="twitter:description" content="Daily AI news, OpenClaw updates, and tech trends. Subscribe for AI-curated insights.">
-    <meta name="twitter:image" content="https://richardlrk.github.io/father-sons-tech.github.io/og-image.jpg">
-    
-    <!-- AI/Tech Specific -->
-    <meta name="topic" content="Artificial Intelligence, Technology, OpenClaw">
-    <meta name="industry" content="Technology, AI & Machine Learning">
-    <meta name="generator" content="Father & Sons Tech AI Scraper v1.0">
-    
-    <!-- Canonical -->
-    <link rel="canonical" href="https://richardlrk.github.io/father-sons-tech.github.io/">
-    
-    <!-- RSS Feed -->
-    <link rel="alternate" type="application/rss+xml" title="Father & Sons Tech RSS" href="/rss.xml">
-    
-    <!-- Schema.org JSON-LD -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "NewsMediaOrganization",
-      "name": "Father & Sons Tech",
-      "url": "https://richardlrk.github.io/father-sons-tech.github.io/",
-      "logo": "https://richardlrk.github.io/father-sons-tech.github.io/logo.png",
-      "description": "Your daily source for AI news, OpenClaw updates, and breaking tech trends.",
-      "foundingDate": "2025",
-      "sameAs": [
-        "https://twitter.com/fatherstech",
-        "https://github.com/richardlrk"
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer service",
-        "email": "contact@fatherstech.com"
-      }
-    }
-    </script>
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Father & Sons Tech",
-      "url": "https://richardlrk.github.io/father-sons-tech.github.io/",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://richardlrk.github.io/father-sons-tech.github.io/search?q={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
-    
+    <title>Father & Sons Tech — Intelligence, Delivered</title>
+    <meta name="description" content="Din dagliga källa för AI-nyheter, OpenClaw-uppdateringar och tech-trender. Kurerat och levererat av AI.">
+    <meta name="keywords" content="AI, OpenClaw, tech nyheter, artificiell intelligens, automation, machine learning">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Sora:wght@200;300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
-        /* ===== CSS RESET & VARIABLES ===== */
-        :root {
-            --bg-primary: #0a0a0a;
-            --bg-secondary: #121212;
-            --bg-tertiary: #1a1a1a;
-            --bg-card: rgba(30, 30, 30, 0.6);
-            --text-primary: #ffffff;
-            --text-secondary: #a0a0a0;
-            --text-muted: #666666;
-            --accent: #d4a574;
-            --accent-hover: #e8c9a0;
-            --accent-glow: rgba(212, 165, 116, 0.3);
-            --border: rgba(255, 255, 255, 0.08);
-            --success: #00d26a;
-            --gradient-dark: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* ===== UTILITIES ===== */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        .section {
-            padding: 100px 0;
-        }
-
-        .section-title {
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 16px;
-            letter-spacing: -0.5px;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-            margin-bottom: 60px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .accent {
-            color: var(--accent);
-        }
-
-        /* ===== SPARKLE DECORATION ===== */
-        .sparkle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: var(--accent);
-            border-radius: 50%;
-            animation: sparkle 2s ease-in-out infinite;
-        }
-
-        .sparkle::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 20px;
-            height: 20px;
-            transform: translate(-50%, -50%);
-            border: 1px solid var(--accent-glow);
-            border-radius: 50%;
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        @keyframes sparkle {
-            0%, 100% { opacity: 0.3; transform: scale(1); }
-            50% { opacity: 1; transform: scale(1.2); }
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
-            50% { transform: translate(-50%, -50%) scale(1.5); opacity: 0; }
-        }
-
-        /* ===== NAVIGATION ===== */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            padding: 16px 0;
-            background: rgba(10, 10, 10, 0.85);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(212, 165, 116, 0.1);
-        }
-
-        .navbar .container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .logo {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            text-decoration: none;
-            letter-spacing: -0.5px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo-icon {
-            width: 36px;
-            height: 36px;
-            background: linear-gradient(135deg, var(--accent) 0%, #f0d9b5 100%);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-        }
-
-        .logo .accent {
-            color: var(--accent);
-        }
-
-        .nav-container {
-            display: flex;
-            align-items: center;
-            gap: 48px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 32px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.3s ease;
-            position: relative;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--accent);
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--text-primary);
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .nav-actions {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .nav-link {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-link:hover {
-            color: var(--accent);
-        }
-
-        .nav-cta {
-            padding: 12px 28px;
-            background: linear-gradient(135deg, var(--accent) 0%, #e8c9a0 100%);
-            border: none;
-            border-radius: 8px;
-            color: #0a0a0a;
-            font-weight: 600;
-            font-size: 0.95rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(212, 165, 116, 0.2);
-        }
-
-        .nav-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(212, 165, 116, 0.3);
-        }
-
-        .mobile-toggle {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 8px;
-        }
-
-        .mobile-toggle span {
-            width: 24px;
-            height: 2px;
-            background: var(--text-primary);
-            transition: all 0.3s ease;
-        }
-
-        /* ===== HERO SECTION ===== */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            padding: 140px 0 100px;
-            background: 
-                radial-gradient(ellipse at 20% 20%, rgba(212, 165, 116, 0.05) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 80%, rgba(212, 165, 116, 0.03) 0%, transparent 50%),
-                var(--bg-primary);
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: 
-                linear-gradient(rgba(212, 165, 116, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(212, 165, 116, 0.03) 1px, transparent 1px);
-            background-size: 60px 60px;
-            pointer-events: none;
-        }
-
-        .hero .container {
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-content {
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 10px 20px;
-            background: rgba(212, 165, 116, 0.08);
-            border: 1px solid rgba(212, 165, 116, 0.15);
-            border-radius: 50px;
-            font-size: 0.875rem;
-            font-weight: 500;
-            color: var(--accent);
-            margin-bottom: 32px;
-            letter-spacing: 0.5px;
-        }
-
-        .hero-badge-dot {
-            width: 8px;
-            height: 8px;
-            background: var(--accent);
-            border-radius: 50%;
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        .hero h1 {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            font-weight: 700;
-            line-height: 1.1;
-            margin-bottom: 28px;
-            letter-spacing: -1px;
-            color: var(--text-primary);
-        }
-
-        .hero h1 .accent {
-            background: linear-gradient(135deg, var(--accent) 0%, #f0d9b5 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-subtitle {
-            font-size: 1.2rem;
-            color: var(--text-secondary);
-            margin-bottom: 48px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.7;
-        }
-
-        .hero-cta {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            margin-bottom: 64px;
-        }
-
-        .btn {
-            padding: 16px 32px;
-            border-radius: 10px;
-            font-size: 1rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border: none;
-        }
-
-        .btn-primary {
-            background: var(--accent);
-            color: var(--bg-primary);
-        }
-
-        .btn-primary:hover {
-            background: var(--accent-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px var(--accent-glow);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--text-primary);
-            border: 1px solid var(--border);
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-        }
-
-        /* Trust Bar */
-        .trust-bar {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 40px;
-            padding: 24px;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            backdrop-filter: blur(10px);
-        }
-
-        .trust-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: var(--text-secondary);
-            font-weight: 500;
-            font-size: 0.9rem;
-        }
-
-        .trust-icon {
-            width: 32px;
-            height: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--bg-tertiary);
-            border-radius: 8px;
-            font-size: 1.2rem;
-        }
-
-        /* Sparkle decorations */
-        .hero-sparkle {
-            position: absolute;
-            width: 6px;
-            height: 6px;
-            background: var(--accent);
-            border-radius: 50%;
-            box-shadow: 0 0 20px var(--accent-glow);
-        }
-
-        .hero-sparkle:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
-        .hero-sparkle:nth-child(2) { top: 60%; left: 85%; animation-delay: 0.5s; }
-        .hero-sparkle:nth-child(3) { top: 30%; right: 15%; animation-delay: 1s; }
-        .hero-sparkle:nth-child(4) { top: 70%; left: 20%; animation-delay: 1.5s; }
-
-        /* ===== FEATURED SECTION ===== */
-        .featured {
-            background: var(--bg-secondary);
-            padding: 120px 0;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-tag {
-            display: inline-block;
-            padding: 8px 16px;
-            background: rgba(212, 165, 116, 0.1);
-            border: 1px solid rgba(212, 165, 116, 0.15);
-            border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: var(--accent);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 20px;
-        }
-
-        .news-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 28px;
-            margin-bottom: 60px;
-        }
-
-        .news-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            overflow: hidden;
-            backdrop-filter: blur(20px);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .news-card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(212, 165, 116, 0.2);
-            box-shadow: 
-                0 25px 50px rgba(0, 0, 0, 0.3),
-                0 0 0 1px rgba(212, 165, 116, 0.05);
-        }
-
-        .news-thumbnail {
-            width: 100%;
-            height: 200px;
-            background: 
-                linear-gradient(135deg, var(--bg-tertiary) 0%, #1e2030 50%, #252540 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .news-thumbnail::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, transparent 40%, rgba(212, 165, 116, 0.03) 50%, transparent 60%);
-            animation: shimmer 3s infinite;
-        }
-
-        .news-thumbnail-icon {
-            font-size: 3.5rem;
-            opacity: 0.4;
-            filter: grayscale(30%);
-        }
-
-        @keyframes shimmer {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
-        }
-
-        .news-content {
-            padding: 24px;
-        }
-
-        .news-meta {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 12px;
-        }
-
-        .news-tag {
-            padding: 4px 12px;
-            background: rgba(212, 165, 116, 0.1);
-            border: 1px solid rgba(212, 165, 116, 0.2);
-            border-radius: 50px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: var(--accent);
-        }
-
-        .news-time {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-        }
-
-        .news-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 12px;
-            line-height: 1.4;
-        }
-
-        .news-card p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            margin-bottom: 16px;
-        }
-
-        .news-link {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 500;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            transition: gap 0.3s ease;
-        }
-
-        .news-link:hover {
-            gap: 10px;
-        }
-
-        /* Stats Bar */
-        .stats-bar {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-            padding: 40px;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            backdrop-filter: blur(20px);
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-value {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--accent);
-            margin-bottom: 8px;
-        }
-
-        .stat-label {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-
-        .stat-badge {
-            display: inline-block;
-            margin-top: 8px;
-            padding: 4px 10px;
-            background: rgba(0, 210, 106, 0.1);
-            border: 1px solid rgba(0, 210, 106, 0.2);
-            border-radius: 50px;
-            font-size: 0.75rem;
-            color: var(--success);
-        }
-
-        /* ===== ACHIEVEMENTS SECTION ===== */
-        .achievements {
-            background: var(--gradient-dark);
-        }
-
-        .achievements-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-
-        .achievement-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 40px;
-            text-align: center;
-            backdrop-filter: blur(20px);
-            transition: all 0.4s ease;
-        }
-
-        .achievement-card:hover {
-            border-color: rgba(212, 165, 116, 0.3);
-            box-shadow: 0 0 40px var(--accent-glow);
-        }
-
-        .achievement-icon {
-            width: 64px;
-            height: 64px;
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(212, 165, 116, 0.1);
-            border-radius: 16px;
-            font-size: 2rem;
-        }
-
-        .achievement-number {
-            font-size: 3rem;
-            font-weight: 800;
-            color: var(--text-primary);
-            margin-bottom: 8px;
-        }
-
-        .achievement-label {
-            color: var(--text-secondary);
-            margin-bottom: 16px;
-        }
-
-        .achievement-growth {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 6px 12px;
-            background: rgba(0, 210, 106, 0.1);
-            border-radius: 50px;
-            font-size: 0.875rem;
-            color: var(--success);
-        }
-
-        /* ===== PRICING SECTION ===== */
-        .pricing {
-            background: var(--bg-secondary);
-        }
-
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            align-items: stretch;
-        }
-
-        .pricing-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 40px 32px;
-            backdrop-filter: blur(20px);
-            transition: all 0.4s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .pricing-card:hover {
-            transform: translateY(-4px);
-        }
-
-        .pricing-card.featured {
-            border-color: var(--accent);
-            box-shadow: 0 0 40px var(--accent-glow);
-            position: relative;
-        }
-
-        .pricing-card.featured::before {
-            content: 'Recommended';
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 6px 16px;
-            background: var(--accent);
-            color: var(--bg-primary);
-            border-radius: 50px;
-            font-size: 0.75rem;
-            font-weight: 600;
-        }
-
-        .pricing-header {
-            text-align: center;
-            padding-bottom: 24px;
-            border-bottom: 1px solid var(--border);
-            margin-bottom: 24px;
-        }
-
-        .pricing-name {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .pricing-price {
-            font-size: 3rem;
-            font-weight: 800;
-        }
-
-        .pricing-price span {
-            font-size: 1rem;
-            font-weight: 400;
-            color: var(--text-secondary);
-        }
-
-        .pricing-features {
-            list-style: none;
-            flex: 1;
-            margin-bottom: 32px;
-        }
-
-        .pricing-features li {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 12px 0;
-            color: var(--text-secondary);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .pricing-features li:last-child {
-            border-bottom: none;
-        }
-
-        .pricing-features li::before {
-            content: '✓';
-            color: var(--success);
-            font-weight: bold;
-        }
-
-        .pricing-btn {
-            width: 100%;
-            padding: 16px;
-            border-radius: 10px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: none;
-        }
-
-        .pricing-card:not(.featured) .pricing-btn {
-            background: transparent;
-            border: 1px solid var(--border);
-            color: var(--text-primary);
-        }
-
-        .pricing-card:not(.featured) .pricing-btn:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-        }
-
-        .pricing-card.featured .pricing-btn {
-            background: var(--accent);
-            color: var(--bg-primary);
-        }
-
-        .pricing-card.featured .pricing-btn:hover {
-            background: var(--accent-hover);
-        }
-
-        /* ===== TESTIMONIALS SECTION ===== */
-        .testimonials {
-            background: var(--gradient-dark);
-        }
-
-        .testimonials-container {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .testimonials-track {
-            display: flex;
-            gap: 24px;
-            transition: transform 0.5s ease;
-        }
-
-        .testimonial-card {
-            flex: 0 0 calc(33.333% - 16px);
-            min-width: 320px;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 32px;
-            backdrop-filter: blur(20px);
-        }
-
-        .testimonial-content {
-            margin-bottom: 24px;
-        }
-
-        .testimonial-quote {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            color: var(--text-secondary);
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .testimonial-avatar {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--accent) 0%, #f0d9b5 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            color: var(--bg-primary);
-        }
-
-        .testimonial-info h4 {
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-
-        .testimonial-info p {
-            font-size: 0.875rem;
-            color: var(--text-muted);
-        }
-
-        /* Testimonial Navigation */
-        .testimonial-nav {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin-top: 32px;
-        }
-
-        .testimonial-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: var(--bg-tertiary);
-            border: 1px solid var(--border);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .testimonial-dot.active {
-            background: var(--accent);
-            border-color: var(--accent);
-        }
-
-        /* ===== FAQ SECTION ===== */
-        .faq {
-            background: var(--bg-secondary);
-        }
-
-        .faq-list {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            margin-bottom: 16px;
-            overflow: hidden;
-            backdrop-filter: blur(20px);
-        }
-
-        .faq-question {
-            width: 100%;
-            padding: 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: none;
-            border: none;
-            color: var(--text-primary);
-            font-size: 1rem;
-            font-weight: 500;
-            text-align: left;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-
-        .faq-question:hover {
-            color: var(--accent);
-        }
-
-        .faq-icon {
-            font-size: 1.5rem;
-            transition: transform 0.3s ease;
-        }
-
-        .faq-item.active .faq-icon {
-            transform: rotate(45deg);
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease;
-        }
-
-        .faq-answer-content {
-            padding: 0 24px 24px;
-            color: var(--text-secondary);
-            line-height: 1.7;
-        }
-
-        .faq-item.active .faq-answer {
-            max-height: 200px;
-        }
-
-        /* ===== FOOTER ===== */
-        .footer {
-            background: var(--bg-primary);
-            padding: 80px 0 40px;
-            border-top: 1px solid var(--border);
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 60px;
-            margin-bottom: 60px;
-        }
-
-        .footer-brand .logo {
-            display: inline-block;
-            margin-bottom: 16px;
-        }
-
-        .footer-brand p {
-            color: var(--text-secondary);
-            max-width: 300px;
-        }
-
-        .footer-newsletter {
-            margin-top: 20px;
-        }
-
-        .footer-newsletter h4 {
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-bottom: 12px;
-            color: var(--text-primary);
-        }
-
-        .footer-newsletter form {
-            display: flex;
-            gap: 8px;
-        }
-
-        .footer-newsletter input {
-            flex: 1;
-            padding: 12px 16px;
-            background: var(--bg-tertiary);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            color: var(--text-primary);
-            font-size: 0.9rem;
-        }
-
-        .footer-newsletter input:focus {
-            outline: none;
-            border-color: var(--accent);
-        }
-
-        .footer-newsletter button {
-            padding: 12px 20px;
-            background: var(--accent);
-            border: none;
-            border-radius: 8px;
-            color: var(--bg-primary);
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .footer-newsletter button:hover {
-            background: var(--accent-hover);
-        }
-
-        .footer-links h4 {
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .footer-links ul {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 12px;
-        }
-
-        .footer-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-links a:hover {
-            color: var(--accent);
-        }
-
-        .footer-bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 40px;
-            border-top: 1px solid var(--border);
-        }
-
-        .footer-bottom p {
-            color: var(--text-muted);
-            font-size: 0.875rem;
-        }
-
-        .footer-social {
-            display: flex;
-            gap: 16px;
-        }
-
-        .footer-social a {
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--bg-tertiary);
-            border-radius: 10px;
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .footer-social a:hover {
-            background: var(--accent);
-            color: var(--bg-primary);
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 1024px) {
-            .pricing-grid {
-                grid-template-columns: 1fr;
-                max-width: 400px;
-                margin: 0 auto;
-            }
-
-            .achievements-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr 1fr;
-                gap: 40px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .nav-cta {
-                display: none;
-            }
-
-            .mobile-toggle {
-                display: flex;
-            }
-
-            .hero-cta {
-                flex-direction: column;
-            }
-
-            .trust-bar {
-                flex-wrap: wrap;
-                gap: 20px;
-            }
-
-            .trust-item {
-                flex: 0 0 calc(50% - 10px);
-                justify-content: center;
-            }
-
-            .stats-bar {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .testimonial-card {
-                flex: 0 0 100%;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-
-            .footer-bottom {
-                flex-direction: column;
-                gap: 20px;
-                text-align: center;
-            }
-        }
-
-        /* ===== ANIMATIONS ===== */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Mobile Navigation */
-        .mobile-nav {
-            display: none;
-            position: fixed;
-            top: 70px;
-            left: 0;
-            right: 0;
-            background: rgba(10, 10, 10, 0.98);
-            padding: 20px;
-            border-bottom: 1px solid var(--border);
-            z-index: 999;
-        }
-
-        .mobile-nav.active {
-            display: block;
-        }
-
-        .mobile-nav .nav-links {
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .mobile-nav .nav-cta {
-            display: block;
-            width: 100%;
-            margin-top: 20px;
-            text-align: center;
-        }
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        :root{ –bg:#07070a; –bg-elevated:#0b0b10; –surface:#101018; –surface-2:#15151f; –border:rgba(255,255,255,0.05); –border-hover:rgba(255,255,255,0.1); –text:#f0f0f5; –text-secondary:rgba(240,240,245,0.55); –text-tertiary:rgba(240,240,245,0.3); –accent:#d4a853; –accent-dim:rgba(212,168,83,0.12); –accent-glow:rgba(212,168,83,0.06); –emerald:#3ee8b5; –emerald-dim:rgba(62,232,181,0.1); –blue:#6ea8fe; –serif:'Playfair Display',Georgia,serif; –sans:'Sora',system-ui,sans-serif; –mono:'JetBrains Mono',monospace; –ease:cubic-bezier(0.16,1,0.3,1); –ease-out:cubic-bezier(0.0,0.0,0.2,1); }
+        html{scroll-behavior:smooth}
+        body{ font-family:var(–sans);background:var(–bg);color:var(–text); overflow-x:hidden;-webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
+        a{color:inherit;text-decoration:none}
+        button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+        img{display:block;max-width:100%}
+        ::selection{background:var(–accent);color:var(–bg)}
+        ::-webkit-scrollbar{width:4px}
+        ::-webkit-scrollbar-track{background:transparent}
+        ::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.08);border-radius:2px}
+        body::before{ content:'';position:fixed;inset:0;z-index:9999;pointer-events:none; opacity:0.025; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E"); background-size:128px 128px; }
+        .ambient{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+        .ambient .orb{position:absolute;border-radius:50%;filter:blur(120px);opacity:0.035}
+        .ambient .orb-1{width:800px;height:800px;background:var(–accent);top:-200px;right:-200px;animation:orb-drift 30s ease-in-out infinite alternate}
+        .ambient .orb-2{width:600px;height:600px;background:var(–emerald);bottom:-100px;left:-200px;animation:orb-drift 25s ease-in-out infinite alternate-reverse}
+        .ambient .orb-3{width:500px;height:500px;background:var(–blue);top:50%;left:50%;transform:translate(-50%,-50%);animation:orb-drift 35s ease-in-out infinite alternate}
+        @keyframes orb-drift{0%{transform:translate(0,0)}50%{transform:translate(40px,-30px)}100%{transform:translate(-20px,40px)}}
+        .container{max-width:1280px;margin:0 auto;padding:0 64px}
+        @media(max-width:900px){.container{padding:0 28px}}
+        @media(max-width:600px){.container{padding:0 20px}}
+        .display{ font-family:var(–serif);font-weight:400; letter-spacing:-0.02em;line-height:1.1; }
+        .display em{font-style:italic;color:var(–accent)}
+        .label{ font-family:var(–mono);font-size:0.65rem;font-weight:500; letter-spacing:0.15em;text-transform:uppercase; color:var(–text-tertiary); display:flex;align-items:center;gap:12px; }
+        .label::before{content:'';width:24px;height:1px;background:var(–text-tertiary)}
+        .reveal{opacity:0;transform:translateY(40px);transition:opacity 1s var(–ease),transform 1s var(–ease)}
+        .reveal.vis{opacity:1;transform:none}
+        .reveal-d1{transition-delay:.1s}
+        .reveal-d2{transition-delay:.2s}
+        .reveal-d3{transition-delay:.3s}
+        .reveal-d4{transition-delay:.4s}
+        .nav{position:fixed;top:0;left:0;right:0;z-index:1000; padding:0 64px;height:72px; display:flex;align-items:center;justify-content:space-between; background:rgba(7,7,10,0.6); backdrop-filter:blur(40px) saturate(180%); border-bottom:1px solid var(–border); transition:all .4s var(–ease); }
+        .nav.scrolled{height:60px;background:rgba(7,7,10,0.9)}
+        .nav-brand{ font-family:var(–serif);font-size:1.3rem;font-weight:600; letter-spacing:-0.02em; display:flex;align-items:center;gap:10px; }
+        .nav-brand .mark{ width:28px;height:28px;border-radius:8px; background:linear-gradient(135deg,var(–accent),#e8c468); display:flex;align-items:center;justify-content:center; font-family:var(–sans);font-weight:700;font-size:0.7rem;color:var(–bg); }
+        .nav-center{display:flex;gap:36px}
+        .nav-center a{ font-size:0.8rem;font-weight:400;color:var(–text-secondary); letter-spacing:0.02em;transition:color .3s;position:relative; }
+        .nav-center a::after{ content:'';position:absolute;bottom:-4px;left:0;right:0;height:1px; background:var(–accent);transform:scaleX(0);transition:transform .3s var(–ease); transform-origin:right; }
+        .nav-center a:hover{color:var(–text)}
+        .nav-center a:hover::after{transform:scaleX(1);transform-origin:left}
+        .nav-right{display:flex;align-items:center;gap:24px}
+        .nav-login{font-size:0.8rem;color:var(–text-secondary);transition:color .3s}
+        .nav-login:hover{color:var(–text)}
+        .btn-nav{ font-size:0.75rem;font-weight:600;letter-spacing:0.04em; padding:10px 24px;border-radius:100px; background:var(–text);color:var(–bg); transition:all .3s var(–ease); }
+        .btn-nav:hover{background:var(–accent);transform:translateY(-1px);box-shadow:0 12px 40px var(–accent-glow)}
+        .hero{ min-height:100vh;display:flex;align-items:center;justify-content:center; text-align:center;padding:160px 24px 120px; position:relative;z-index:1; }
+        .hero-inner{max-width:820px}
+        .hero .label{justify-content:center;margin-bottom:40px}
+        .hero .display{font-size:clamp(3rem,7vw,5.5rem)}
+        .hero-body{ font-size:1.05rem;font-weight:300;line-height:1.8; color:var(–text-secondary);max-width:540px;margin:28px auto 0; }
+        .hero-actions{display:flex;gap:14px;justify-content:center;margin-top:48px}
+        .btn-hero-primary{ padding:16px 40px;border-radius:100px; background:var(–text);color:var(–bg); font-size:0.85rem;font-weight:600;letter-spacing:0.02em; transition:all .35s var(–ease); position:relative;overflow:hidden; }
+        .btn-hero-primary::before{ content:'';position:absolute;inset:0; background:linear-gradient(135deg,var(–accent),#e8c468); opacity:0;transition:opacity .35s; }
+        .btn-hero-primary span{position:relative;z-index:1}
+        .btn-hero-primary:hover{transform:translateY(-2px);box-shadow:0 20px 60px rgba(212,168,83,0.15)}
+        .btn-hero-primary:hover::before{opacity:1}
+        .btn-hero-secondary{ padding:16px 40px;border-radius:100px; border:1px solid var(–border-hover); font-size:0.85rem;font-weight:400;color:var(–text-secondary); letter-spacing:0.02em;transition:all .35s var(–ease); }
+        .btn-hero-secondary:hover{border-color:rgba(255,255,255,0.2);color:var(–text);background:rgba(255,255,255,0.02)}
+        .hero-trust{ margin-top:80px;display:flex;flex-direction:column;align-items:center;gap:20px; }
+        .hero-trust-label{font-family:var(–mono);font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(–text-tertiary)}
+        .hero-trust-logos{display:flex;gap:48px;align-items:center;opacity:0.3}
+        .hero-trust-logos span{font-family:var(–sans);font-size:0.85rem;font-weight:600;letter-spacing:0.06em}
+        .divider{width:100%;height:1px;background:var(–border);position:relative;z-index:1}
+        .features{padding:140px 0;position:relative;z-index:1}
+        .features-header{margin-bottom:72px}
+        .features-header .display{font-size:clamp(2.2rem,4.5vw,3.6rem);max-width:560px}
+        .features-header-row{display:flex;justify-content:space-between;align-items:flex-end;gap:40px}
+        .features-header p{ font-size:0.9rem;color:var(–text-secondary);line-height:1.8;max-width:380px;font-weight:300;text-align:right; }
+        .bento{display:grid;grid-template-columns:repeat(12,1fr);gap:12px}
+        .bento-card{ background:var(–surface); border:1px solid var(–border); border-radius:20px; padding:36px; position:relative;overflow:hidden; transition:all .5s var(–ease); }
+        .bento-card:hover{border-color:var(–border-hover);transform:translateY(-4px)}
+        .bento-card::before{ content:'';position:absolute;top:0;left:0;right:0;height:1px; background:linear-gradient(90deg,transparent,rgba(255,255,255,0.06),transparent); }
+        .bc-1{grid-column:span 8}
+        .bc-2{grid-column:span 4}
+        .bc-3{grid-column:span 4}
+        .bc-4{grid-column:span 4}
+        .bc-5{grid-column:span 4}
+        .bento-card .b-icon{ width:48px;height:48px;border-radius:14px; background:var(–accent-dim); display:flex;align-items:center;justify-content:center; margin-bottom:24px;font-size:1.1rem; }
+        .bento-card h3{font-family:var(–serif);font-size:1.25rem;font-weight:500;margin-bottom:10px;line-height:1.3}
+        .bento-card p{font-size:0.82rem;color:var(–text-secondary);line-height:1.7;font-weight:300}
+        .bc-1 .b-visual{ position:absolute;right:36px;bottom:36px; width:280px;height:160px;border-radius:14px; background:var(–surface-2);border:1px solid var(–border); overflow:hidden;display:flex;flex-direction:column; }
+        .b-visual-header{ padding:12px 16px;border-bottom:1px solid var(–border); font-family:var(–mono);font-size:0.6rem;color:var(–text-tertiary); display:flex;justify-content:space-between; }
+        .b-visual-bars{flex:1;display:flex;align-items:flex-end;gap:4px;padding:12px 16px}
+        .b-visual-bar{ flex:1;border-radius:4px 4px 0 0; background:linear-gradient(180deg,var(–accent),rgba(212,168,83,0.2)); transition:height .6s var(–ease); }
+        .stats-ribbon{ display:grid;grid-template-columns:repeat(4,1fr);gap:12px; margin-top:12px; }
+        .stat-pill{ background:var(–surface);border:1px solid var(–border); border-radius:16px;padding:28px 24px; text-align:center;transition:all .4s var(–ease); }
+        .stat-pill:hover{border-color:var(–border-hover);transform:translateY(-2px)}
+        .stat-pill .s-val{ font-family:var(–mono);font-size:1.6rem;font-weight:500; letter-spacing:-0.04em; }
+        .stat-pill .s-val.gold{color:var(–accent)}
+        .stat-pill .s-val.green{color:var(–emerald)}
+        .stat-pill .s-val.blue{color:var(–blue)}
+        .stat-pill .s-label{ font-size:0.65rem;color:var(–text-tertiary);margin-top:6px; text-transform:uppercase;letter-spacing:0.12em;font-weight:500; }
+        .editorial{padding:140px 0;position:relative;z-index:1}
+        .editorial-header{margin-bottom:72px}
+        .editorial-header .display{font-size:clamp(2.2rem,4.5vw,3.6rem);max-width:600px}
+        .news-list{display:flex;flex-direction:column;gap:0}
+        .news-item{ display:grid;grid-template-columns:auto 1fr auto;gap:40px; align-items:center; padding:36px 0; border-top:1px solid var(–border); transition:all .4s var(–ease); cursor:pointer; }
+        .news-item:last-child{border-bottom:1px solid var(–border)}
+        .news-item:hover{padding-left:16px}
+        .news-item:hover .news-arrow{opacity:1;transform:translateX(0)}
+        .news-num{ font-family:var(–mono);font-size:0.7rem;color:var(–text-tertiary); min-width:32px; }
+        .news-content h3{ font-family:var(–serif);font-size:1.35rem;font-weight:500; line-height:1.35;margin-bottom:8px;transition:color .3s; }
+        .news-item:hover .news-content h3{color:var(–accent)}
+        .news-content .news-excerpt{ font-size:0.82rem;color:var(–text-secondary);line-height:1.7; font-weight:300;max-width:600px; }
+        .news-meta-row{ display:flex;align-items:center;gap:16px;margin-top:12px; }
+        .news-cat{ font-family:var(–mono);font-size:0.6rem;font-weight:500; letter-spacing:0.1em;text-transform:uppercase; padding:4px 12px;border-radius:100px; }
+        .news-cat.ai{background:var(–accent-dim);color:var(–accent)}
+        .news-cat.tech{background:rgba(110,168,254,0.1);color:var(–blue)}
+        .news-cat.openclaw{background:rgba(62,232,181,0.1);color:var(–emerald)}
+        .news-cat.startup{background:var(–emerald-dim);color:var(–emerald)}
+        .news-date{font-family:var(–mono);font-size:0.65rem;color:var(–text-tertiary)}
+        .news-arrow{ font-size:1.2rem;color:var(–text-tertiary);opacity:0;transform:translateX(-8px); transition:all .4s var(–ease); }
+        .results{padding:140px 0;position:relative;z-index:1}
+        .results-header{margin-bottom:72px}
+        .results-header .display{font-size:clamp(2.2rem,4.5vw,3.6rem);max-width:600px}
+        .results-header p{ font-size:0.9rem;color:var(–text-secondary);font-weight:300;margin-top:12px;max-width:480px;line-height:1.7; }
+        .results-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+        .results-card{ background:var(–surface);border:1px solid var(–border); border-radius:20px;padding:48px;position:relative;overflow:hidden; transition:all .4s var(–ease); }
+        .results-card:hover{border-color:var(–border-hover)}
+        .results-card .r-val{ font-family:var(–mono);font-size:clamp(3rem,6vw,4.5rem); font-weight:300;letter-spacing:-0.05em;line-height:1; }
+        .results-card .r-val.gold{color:var(–accent)}
+        .results-card .r-val.green{color:var(–emerald)}
+        .results-card .r-desc{font-size:0.85rem;color:var(–text-secondary);margin-top:12px;font-weight:300;line-height:1.6}
+        .results-card .r-glow{ position:absolute;width:200px;height:200px;border-radius:50%; filter:blur(80px);pointer-events:none;opacity:0.08; }
+        .results-card .r-glow.g1{background:var(–accent);top:-60px;right:-60px}
+        .results-card .r-glow.g2{background:var(–emerald);bottom:-60px;left:-60px}
+        .results-chart-card{ grid-column:span 2;background:var(–surface); border:1px solid var(–border);border-radius:20px; padding:48px;position:relative;overflow:hidden; }
+        .rc-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:36px}
+        .rc-header h4{font-family:var(–serif);font-size:1.15rem;font-weight:500}
+        .rc-badge{ font-family:var(–mono);font-size:0.65rem;font-weight:500; padding:6px 16px;border-radius:100px; background:var(–emerald-dim);color:var(–emerald); letter-spacing:0.06em; }
+        .chart-area{height:200px;display:flex;align-items:flex-end;gap:6px;position:relative}
+        .chart-area::before{ content:'';position:absolute;bottom:0;left:0;right:0;height:1px; background:var(–border); }
+        .c-bar{ flex:1;border-radius:6px 6px 0 0;position:relative; transition:all .5s var(–ease);cursor:pointer; }
+        .c-bar:hover{filter:brightness(1.4)}
+        .c-bar .c-tip{ position:absolute;top:-28px;left:50%;transform:translateX(-50%); font-family:var(–mono);font-size:0.6rem;color:var(–text-secondary); opacity:0;transition:opacity .3s;white-space:nowrap; background:var(–surface-2);padding:3px 8px;border-radius:6px; border:1px solid var(–border); }
+        .c-bar:hover .c-tip{opacity:1}
+        .chart-labels{display:flex;gap:6px;margin-top:12px}
+        .chart-labels span{ flex:1;text-align:center;font-family:var(–mono); font-size:0.55rem;color:var(–text-tertiary);letter-spacing:0.08em; }
+        .pricing{padding:140px 0;position:relative;z-index:1}
+        .pricing-header{margin-bottom:72px;text-align:center}
+        .pricing-header .label{justify-content:center}
+        .pricing-header .display{font-size:clamp(2.2rem,4.5vw,3.6rem);margin:0 auto}
+        .pricing-header p{color:var(–text-secondary);font-size:0.9rem;font-weight:300;margin-top:16px}
+        .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+        .price-card{ background:var(–surface);border:1px solid var(–border); border-radius:20px;padding:44px 36px; transition:all .4s var(–ease);position:relative; display:flex;flex-direction:column; }
+        .price-card:hover{border-color:var(–border-hover);transform:translateY(-4px)}
+        .price-card.featured{ border-color:rgba(212,168,83,0.25); background:linear-gradient(180deg,rgba(212,168,83,0.03),var(–surface)); }
+        .price-card.featured::before{ content:'Rekommenderad';position:absolute;top:-1px;left:50%;transform:translateX(-50%); font-family:var(–mono);font-size:0.55rem;font-weight:600; letter-spacing:0.12em;text-transform:uppercase; padding:6px 20px;border-radius:0 0 10px 10px; background:var(–accent);color:var(–bg); }
+        .p-tier{ font-family:var(–mono);font-size:0.6rem;font-weight:500; letter-spacing:0.15em;text-transform:uppercase; color:var(–text-tertiary);margin-bottom:20px; }
+        .p-amount{ font-family:var(–serif);font-size:3.2rem;font-weight:400; letter-spacing:-0.03em;line-height:1; }
+        .p-amount span{font-family:var(–sans);font-size:0.85rem;font-weight:300;color:var(–text-tertiary)}
+        .p-desc{font-size:0.8rem;color:var(–text-secondary);margin-top:12px;line-height:1.6;font-weight:300}
+        .p-divider{width:100%;height:1px;background:var(–border);margin:28px 0}
+        .p-features{list-style:none;display:flex;flex-direction:column;gap:14px;flex:1}
+        .p-features li{ font-size:0.82rem;color:var(–text-secondary);font-weight:300; display:flex;align-items:flex-start;gap:12px;line-height:1.5; }
+        .p-features li::before{ content:'';width:5px;height:5px;border-radius:50%; background:var(–accent);margin-top:6px;flex-shrink:0; }
+        .p-btn{ width:100%;margin-top:32px;padding:16px;border-radius:100px; font-size:0.82rem;font-weight:600;text-align:center; letter-spacing:0.02em;transition:all .35s var(–ease); }
+        .p-btn.ghost{border:1px solid var(–border-hover);color:var(–text)}
+        .p-btn.ghost:hover{border-color:rgba(255,255,255,0.2);background:rgba(255,255,255,0.02)}
+        .p-btn.solid{background:var(–accent);color:var(–bg)}
+        .p-btn.solid:hover{background:#e0b85e;transform:translateY(-2px);box-shadow:0 16px 48px rgba(212,168,83,0.12)}
+        .testimonials{padding:140px 0;position:relative;z-index:1}
+        .testimonials-header{margin-bottom:72px}
+        .testimonials-header .display{font-size:clamp(2.2rem,4.5vw,3.6rem);max-width:500px}
+        .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+        .test-card{ background:var(–surface);border:1px solid var(–border); border-radius:20px;padding:36px; transition:all .4s var(–ease);display:flex;flex-direction:column; }
+        .test-card:hover{border-color:var(–border-hover);transform:translateY(-3px)}
+        .test-stars{display:flex;gap:3px;margin-bottom:24px}
+        .test-stars .star{width:14px;height:14px;fill:var(–accent)}
+        .test-quote{ font-family:var(–serif);font-size:1.05rem;font-weight:400; font-style:italic;line-height:1.65;color:var(–text-secondary); flex:1;margin-bottom:28px; }
+        .test-author{display:flex;align-items:center;gap:14px;padding-top:20px;border-top:1px solid var(–border)}
+        .test-avatar{ width:40px;height:40px;border-radius:50%; background:linear-gradient(135deg,var(–accent),#e8c468); display:flex;align-items:center;justify-content:center; font-family:var(–mono);font-weight:600;font-size:0.7rem;color:var(–bg); }
+        .test-name{font-size:0.82rem;font-weight:600}
+        .test-role{font-size:0.7rem;color:var(–text-tertiary);margin-top:2px}
+        .faq{padding:140px 0;position:relative;z-index:1}
+        .faq-layout{display:grid;grid-template-columns:1fr 1.2fr;gap:80px;align-items:start}
+        .faq-left .display{font-size:clamp(2rem,3.5vw,2.8rem)}
+        .faq-left p{font-size:0.85rem;color:var(–text-secondary);line-height:1.7;font-weight:300;margin-top:16px;max-width:360px}
+        .faq-list{display:flex;flex-direction:column;gap:0}
+        .faq-item{border-bottom:1px solid var(–border)}
+        .faq-item:first-child{border-top:1px solid var(–border)}
+        .faq-q{ padding:24px 0;display:flex;justify-content:space-between;align-items:center; cursor:pointer;font-size:0.95rem;font-weight:500; transition:color .3s;gap:24px; }
+        .faq-q:hover{color:var(–accent)}
+        .faq-arrow{ width:32px;height:32px;border-radius:50%; border:1px solid var(–border); display:flex;align-items:center;justify-content:center; font-size:0.65rem;color:var(–text-tertiary); transition:all .4s var(–ease);flex-shrink:0; }
+        .faq-item.open .faq-arrow{transform:rotate(180deg);border-color:var(–accent);color:var(–accent)}
+        .faq-a{max-height:0;overflow:hidden;transition:max-height .5s var(–ease)}
+        .faq-item.open .faq-a{max-height:200px}
+        .faq-a p{font-size:0.85rem;color:var(–text-secondary);line-height:1.7;font-weight:300;padding-bottom:24px}
+        .cta-section{ padding:140px 0;position:relative;z-index:1;text-align:center; }
+        .cta-box{ background:var(–surface);border:1px solid var(–border); border-radius:28px;padding:80px 48px; position:relative;overflow:hidden; }
+        .cta-box::before{ content:'';position:absolute;top:-2px;left:20%;right:20%;height:2px; background:linear-gradient(90deg,transparent,var(–accent),transparent); }
+        .cta-box .display{font-size:clamp(2rem,4vw,3rem);max-width:500px;margin:0 auto}
+        .cta-box p{color:var(–text-secondary);font-size:0.9rem;font-weight:300;margin-top:16px;max-width:420px;margin-left:auto;margin-right:auto;line-height:1.7}
+        .cta-input-row{ display:flex;gap:10px;max-width:420px;margin:36px auto 0; }
+        .cta-input{ flex:1;padding:16px 24px;border-radius:100px; background:var(–bg);border:1px solid var(–border); color:var(–text);font-family:var(–sans);font-size:0.85rem; outline:none;transition:border-color .3s; }
+        .cta-input::placeholder{color:var(–text-tertiary)}
+        .cta-input:focus{border-color:var(–accent)}
+        .cta-submit{ padding:16px 32px;border-radius:100px; background:var(–accent);color:var(–bg); font-weight:600;font-size:0.82rem;letter-spacing:0.02em; transition:all .3s var(–ease);white-space:nowrap; }
+        .cta-submit:hover{background:#e0b85e;transform:translateY(-1px)}
+        .footer{border-top:1px solid var(–border);padding:72px 0 40px;position:relative;z-index:1}
+        .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px}
+        .footer-brand{font-family:var(–serif);font-size:1.2rem;font-weight:600}
+        .footer-brand p{font-family:var(–sans);font-size:0.8rem;color:var(–text-tertiary);line-height:1.7;margin-top:16px;font-weight:300;max-width:280px}
+        .footer-col h5{ font-family:var(–mono);font-size:0.55rem;font-weight:600; letter-spacing:0.15em;text-transform:uppercase; color:var(–text-tertiary);margin-bottom:20px; }
+        .footer-col a{ display:block;font-size:0.82rem;color:var(–text-secondary); margin-bottom:12px;font-weight:300;transition:color .3s; }
+        .footer-col a:hover{color:var(–text)}
+        .footer-bottom{ display:flex;justify-content:space-between;align-items:center; margin-top:60px;padding-top:24px;border-top:1px solid var(–border); font-family:var(–mono);font-size:0.6rem;color:var(–text-tertiary); letter-spacing:0.06em; }
+        @media(max-width:1024px){ .bento{grid-template-columns:repeat(6,1fr)} .bc-1{grid-column:span 6} .bc-2,.bc-3,.bc-4,.bc-5{grid-column:span 3} .bc-1 .b-visual{display:none} }
+        @media(max-width:900px){ .nav{padding:0 28px} .nav-center{display:none} .features-header-row{flex-direction:column;align-items:flex-start} .features-header p{text-align:left} .bento{grid-template-columns:1fr} .bc-1,.bc-2,.bc-3,.bc-4,.bc-5{grid-column:span 1} .stats-ribbon{grid-template-columns:repeat(2,1fr)} .news-item{grid-template-columns:1fr;gap:8px} .news-num{display:none} .news-arrow{display:none} .results-grid{grid-template-columns:1fr} .results-chart-card{grid-column:span 1} .pricing-grid{grid-template-columns:1fr} .test-grid{grid-template-columns:1fr} .faq-layout{grid-template-columns:1fr;gap:40px} .footer-grid{grid-template-columns:1fr 1fr} }
+        @media(max-width:600px){ .nav{padding:0 20px;height:60px} .hero{padding:120px 20px 80px} .hero-actions{flex-direction:column;max-width:320px;margin-left:auto;margin-right:auto} .hero-trust-logos{flex-wrap:wrap;gap:20px;justify-content:center} .stats-ribbon{grid-template-columns:1fr} .cta-input-row{flex-direction:column} .footer-grid{grid-template-columns:1fr} .footer-bottom{flex-direction:column;gap:12px;text-align:center} }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">
-                <div class="logo-icon">⚡</div>
-                Father & Sons <span class="accent">Tech</span>
-            </a>
-            <div class="nav-container">
-                <ul class="nav-links">
-                    <li><a href="#featured">News</a></li>
-                    <li><a href="#achievements">Impact</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="#testimonials">Reviews</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                </ul>
-                <div class="nav-actions">
-                    <a href="#newsletter" class="nav-link">Newsletter</a>
-                    <button class="nav-cta" onclick="document.getElementById('pricing').scrollIntoView({behavior: 'smooth'})">Subscribe</button>
-                </div>
-            </div>
-            <button class="mobile-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+    <div class="ambient">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+    <!-- NAV -->
+    <nav class="nav" id="nav">
+        <div class="nav-brand">
+            <div class="mark">FS</div>
+            Father & Sons Tech
+        </div>
+        <div class="nav-center">
+            <a href="#features">Tjänster</a>
+            <a href="#editorial">Nyheter</a>
+            <a href="#results">Resultat</a>
+            <a href="#pricing">Priser</a>
+            <a href="#faq">FAQ</a>
+        </div>
+        <div class="nav-right">
+            <a href="#" class="nav-login">Logga in</a>
+            <button class="btn-nav">Kom igång</button>
         </div>
     </nav>
-
-    <!-- Mobile Navigation -->
-    <div class="mobile-nav">
-        <ul class="nav-links">
-            <li><a href="#featured">News</a></li>
-            <li><a href="#achievements">Impact</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#testimonials">Reviews</a></li>
-            <li><a href="#faq">FAQ</a></li>
-        </ul>
-        <div class="nav-actions" style="flex-direction: column; margin-top: 20px;">
-            <a href="#newsletter" class="nav-link" style="text-align: center;">Newsletter</a>
-            <button class="nav-cta" style="width: 100%;" onclick="document.getElementById('pricing').scrollIntoView({behavior: 'smooth'}); document.querySelector('.mobile-nav').classList.remove('active');">Subscribe</button>
-        </div>
-    </div>
-
-    <!-- Hero Section -->
+    <!-- HERO -->
     <section class="hero">
-        <div class="hero-sparkle"></div>
-        <div class="hero-sparkle"></div>
-        <div class="hero-sparkle"></div>
-        <div class="hero-sparkle"></div>
-        <div class="container">
-            <div class="hero-content fade-in">
-                <span class="hero-badge">
-                    <span class="hero-badge-dot"></span>
-                    AI-Powered Tech Journalism
-                </span>
-                <h1>Stay <span class="accent">Ahead</span> in AI & Tech</h1>
-                <p class="hero-subtitle">Your daily source for breaking AI news, OpenClaw updates, and innovation insights from the frontier of technology.</p>
-                <div class="hero-cta">
-                    <a href="#featured" class="btn btn-primary">Read Latest</a>
-                    <a href="#pricing" class="btn btn-secondary">Subscribe</a>
-                </div>
-                <div class="trust-bar">
-                    <div class="trust-item">
-                        <span class="trust-icon">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"/>
-                                <path d="M8 12l2 2 4-4"/>
-                            </svg>
-                        </span>
-                        <span>OpenAI</span>
-                    </div>
-                    <div class="trust-item">
-                        <span class="trust-icon">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"/>
-                                <path d="M8 12l2 2 4-4"/>
-                            </svg>
-                        </span>
-                        <span>Google</span>
-                    </div>
-                    <div class="trust-item">
-                        <span class="trust-icon">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"/>
-                                <path d="M8 12l2 2 4-4"/>
-                            </svg>
-                        </span>
-                        <span>Meta</span>
-                    </div>
-                    <div class="trust-item">
-                        <span class="trust-icon">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"/>
-                                <path d="M8 12l2 2 4-4"/>
-                            </svg>
-                        </span>
-                        <span>NVIDIA</span>
-                    </div>
-                    <div class="trust-item">
-                        <span class="trust-icon">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"/>
-                                <path d="M8 12l2 2 4-4"/>
-                            </svg>
-                        </span>
-                        <span>Microsoft</span>
-                    </div>
+        <div class="hero-inner">
+            <div class="label reveal">OpenClaw & AI-experter</div>
+            <h1 class="display reveal reveal-d1">Automatiserad.<br><em>Skalbar.</em>Framtiden.</h1>
+            <p class="hero-body reveal reveal-d2">Vi bygger AI-drivna arbetsflöden för företag som vill ligga steget före. OpenClaw-experter som levererar resultat — inte bara verktyg.</p>
+            <div class="hero-actions reveal reveal-d3">
+                <button class="btn-hero-primary"><span>Kontakta oss</span></button>
+                <button class="btn-hero-secondary">Läs nyheter</button>
+            </div>
+            <div class="hero-trust reveal reveal-d4">
+                <div class="hero-trust-label">Vi bygger med</div>
+                <div class="hero-trust-logos">
+                    <span>OpenClaw</span><span>NVIDIA</span><span>OpenAI</span><span>Anthropic</span><span>Google</span>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Featured Section -->
-    <section id="featured" class="section featured">
-        <div class="container">
-            <h2 class="section-title">AI News That Delivers <span class="accent">Real Insights</span></h2>
-            <p class="section-subtitle">Curated stories that matter for tech enthusiasts and professionals</p>
-            <div class="news-grid">
-                <article class="news-card fade-in">
-                    <div class="news-thumbnail">
-                        <span class="news-thumbnail-icon">📰</span>
-                    </div>
-                    <div class="news-content">
-                        <div class="news-meta">
-                            <span class="news-tag">Breaking</span>
-                            <span class="news-time">5 min read</span>
-                        </div>
-                        <h3>OpenAI Announces GPT-5: What We Know So Far</h3>
-                        <p>The next generation of AI models promises unprecedented reasoning capabilities...</p>
-                        <a href="#" class="news-link">Read More →</a>
-                    </div>
-                </article>
-                <article class="news-card fade-in">
-                    <div class="news-thumbnail">
-                        <span class="news-thumbnail-icon">🤖</span>
-                    </div>
-                    <div class="news-content">
-                        <div class="news-meta">
-                            <span class="news-tag">Analysis</span>
-                            <span class="news-time">8 min read</span>
-                        </div>
-                        <h3>The State of AI in 2025: Trends Shaping the Future</h3>
-                        <p>From autonomous agents to multimodal systems, here's what defines the year ahead...</p>
-                        <a href="#" class="news-link">Read More →</a>
-                    </div>
-                </article>
-                <article class="news-card fade-in">
-                    <div class="news-thumbnail">
-                        <span class="news-thumbnail-icon">💻</span>
-                    </div>
-                    <div class="news-content">
-                        <div class="news-meta">
-                            <span class="news-tag">Tutorial</span>
-                            <span class="news-time">12 min read</span>
-                        </div>
-                        <h3>Building AI-Powered Apps: A Complete Guide</h3>
-                        <p>Learn how to integrate LLMs into your applications with practical code examples...</p>
-                        <a href="#" class="news-link">Read More →</a>
-                    </div>
-                </article>
+    <div class="divider"></div>
+    <!-- FEATURES -->
+    <section class="features container" id="features">
+        <div class="features-header reveal">
+            <div class="features-header-row">
+                <div>
+                    <div class="label">Tjänster</div>
+                    <h2 class="display" style="margin-top:20px">Verktyg som ger dig <em>övertaget</em></h2>
+                </div>
+                <p>OpenClaw-baserade lösningar som levererar resultat snabbare och skarpare — för den som inte har tid att missa något.</p>
             </div>
-            <div class="stats-bar fade-in">
-                <div class="stat-item">
-                    <div class="stat-value">500+</div>
-                    <div class="stat-label">Articles Published</div>
+        </div>
+        <div class="bento">
+            <div class="bento-card bc-1 reveal">
+                <div class="b-icon">⚡</div>
+                <h3>OpenClaw-implementation</h3>
+                <p>Komplett setup av AI-automation för ditt företag. Från konfiguration till produktion — vi tar dig hela vägen.</p>
+                <div class="b-visual">
+                    <div class="b-visual-header"><span>Automatisering — 12 mån</span><span style="color:var(--emerald)">↑ 340%</span></div>
+                    <div class="b-visual-bars" id="miniChart"></div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-value">50K+</div>
-                    <div class="stat-label">Monthly Readers</div>
+            </div>
+            <div class="bento-card bc-2 reveal reveal-d1">
+                <div class="b-icon">🧠</div>
+                <h3>AI-workflows</h3>
+                <p>Skräddarsydda automatiseringsflöden byggda i OpenClaw. Text, bild, data — allt samlat.</p>
+            </div>
+            <div class="bento-card bc-3 reveal reveal-d2">
+                <div class="b-icon">📊</div>
+                <h3>Integrationer</h3>
+                <p>Koppla ihop dina system: API:er, databaser, Chattjänster, kalendrar och mer.</p>
+            </div>
+            <div class="bento-card bc-4 reveal reveal-d1">
+                <div class="b-icon">🔔</div>
+                <h3>Konsultation</h3>
+                <p>Strategisk rådgivning kring AI-implementation. Vi guidar din tekniska resa.</p>
+            </div>
+            <div class="bento-card bc-5 reveal reveal-d2">
+                <div class="b-icon">📰</div>
+                <h3>Tech-nyheter</h3>
+                <p>Kurerad bevakning av AI, OpenClaw och tech-trender. Håll dig uppdaterad.</p>
+            </div>
+        </div>
+        <div class="stats-ribbon reveal" style="margin-top:12px">
+            <div class="stat-pill"><div class="s-val gold">50+</div><div class="s-label">Projekt</div></div>
+            <div class="stat-pill"><div class="s-val green">1000h</div><div class="s-label">Automation</div></div>
+            <div class="stat-pill"><div class="s-val blue">99%</div><div class="s-label">Nöjdhet</div></div>
+            <div class="stat-pill"><div class="s-val">24/7</div><div class="s-label">Support</div></div>
+        </div>
+    </section>
+    <div class="divider container"></div>
+    <!-- EDITORIAL NEWS -->
+    <section class="editorial container" id="editorial">
+        <div class="editorial-header reveal">
+            <div class="label">Senaste nytt</div>
+            <h2 class="display" style="margin-top:20px">Nyheter som <em>formar framtiden</em></h2>
+        </div>
+        <div class="news-list">
+            <div class="news-item reveal">
+                <span class="news-num">01</span>
+                <div class="news-content">
+                    <h3>OpenClaw 2026.2.6 — Nu med GPT-4o-integration</h3>
+                    <p class="news-excerpt">Senaste versionen erbjuder sömlös integration med GPT-4o, förbättrad multimodality och snabbare arbetsflöden.</p>
+                    <div class="news-meta-row"><span class="news-cat openclaw">OpenClaw</span><span class="news-date">12 Feb 2026 · 3 min</span></div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-value">15K+</div>
-                    <div class="stat-label">Newsletter Subscribers</div>
+                <span class="news-arrow">→</span>
+            </div>
+            <div class="news-item reveal reveal-d1">
+                <span class="news-num">02</span>
+                <div class="news-content">
+                    <h3>NVIDIA:s nya Blackwell-arkitektur sätter nya rekord</h3>
+                    <p class="news-excerpt">Tredubbel prestanda för AI-workloads med drastiskt lägre energiförbrukning. Game changer för lokala AI-lösningar.</p>
+                    <div class="news-meta-row"><span class="news-cat tech">Tech</span><span class="news-date">11 Feb 2026 · 5 min</span></div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-value">AI</div>
-                    <div class="stat-label">Powered by AI-curated content</div>
+                <span class="news-arrow">→</span>
+            </div>
+            <div class="news-item reveal reveal-d2">
+                <span class="news-num">03</span>
+                <div class="news-content">
+                    <h3>Agentic AI — nästa steg i automation</h3>
+                    <p class="news-excerpt">Självständiga AI-agenter som planerar och exekverar komplexa uppgifter. Vad det betyder för ditt företag.</p>
+                    <div class="news-meta-row"><span class="news-cat ai">AI</span><span class="news-date">10 Feb 2026 · 6 min</span></div>
+                </div>
+                <span class="news-arrow">→</span>
+            </div>
+            <div class="news-item reveal reveal-d3">
+                <span class="news-num">04</span>
+                <div class="news-content">
+                    <h3>Svensk AI-startup tar in 200M i Series B</h3>
+                    <p class="news-excerpt">Fokus på automatiserad medicinteknik. Nu kunder i 15 länder och siktar på IPO 2027.</p>
+                    <div class="news-meta-row"><span class="news-cat startup">Startup</span><span class="news-date">9 Feb 2026 · 4 min</span></div>
+                </div>
+                <span class="news-arrow">→</span>
+            </div>
+        </div>
+    </section>
+    <div class="divider container"></div>
+    <!-- RESULTS -->
+    <section class="results container" id="results">
+        <div class="results-header reveal">
+            <div class="label">Resultat</div>
+            <h2 class="display" style="margin-top:20px">Siffror som <em>talar för sig</em></h2>
+            <p style="font-size:0.9rem;color:var(--text-secondary);font-weight:300;margin-top:12px;max-width:480px;line-height:1.7">Från startups till enterprise — företag litar på Father & Sons Tech för deras AI-automatisering.</p>
+        </div>
+        <div class="results-grid reveal">
+            <div class="results-card">
+                <div class="r-val gold">340%</div>
+                <div class="r-desc">Ökad automationseffektivitet hos våra kunder under 12 månader</div>
+                <div class="r-glow g1"></div>
+            </div>
+            <div class="results-card">
+                <div class="r-val green">1000+</div>
+                <div class="r-desc">Arbetsflöden automatiserade via OpenClaw</div>
+                <div class="r-glow g2"></div>
+            </div>
+            <div class="results-chart-card reveal reveal-d1">
+                <div class="rc-header">
+                    <h4>Månadsvis kundtillväxt</h4>
+                    <span class="rc-badge">↑ 24% denna månad</span>
+                </div>
+                <div class="chart-area" id="chartArea"></div>
+                <div class="chart-labels" id="chartLabels"></div>
+            </div>
+        </div>
+    </section>
+    <div class="divider container"></div>
+    <!-- PRICING -->
+    <section class="pricing container" id="pricing">
+        <div class="pricing-header reveal">
+            <div class="label" style="justify-content:center">Priser</div>
+            <h2 class="display" style="margin-top:20px">Välj din <em>nivå</em></h2>
+            <p>Transparent och flexibelt. Börja enkelt, skala när du växer.</p>
+        </div>
+        <div class="pricing-grid">
+            <div class="price-card reveal">
+                <div class="p-tier">Konsultation</div>
+                <div class="p-amount">2.500<span> kr /tim</span></div>
+                <div class="p-desc">Perfekt för att komma igång och kartlägga möjligheter.</div>
+                <div class="p-divider"></div>
+                <ul class="p-features">
+                    <li>Strategisk genomgång</li>
+                    <li>Teknisk analys</li>
+                    <li>Översiktlig roadmap</li>
+                    <li>1 timmes session</li>
+                </ul>
+                <button class="p-btn ghost">Boka tid</button>
+            </div>
+            <div class="price-card featured reveal reveal-d1">
+                <div class="p-tier">Implementation</div>
+                <div class="p-amount">29.900<span> kr /projekt</span></div>
+                <div class="p-desc">Komplett OpenClaw-setup för team som vill komma igång snabbt.</div>
+                <div class="p-divider"></div>
+                <ul class="p-features">
+                    <li>Komplett OpenClaw-installation</li>
+                    <li>5 anpassade arbetsflöden</li>
+                    <li>Integrationer (API, etc)</li>
+                    <li>Documentation</li>
+                    <li>2 veckors support</li>
+                </ul>
+                <button class="p-btn solid">Starta projekt</button>
+            </div>
+            <div class="price-card reveal reveal-d2">
+                <div class="p-tier">Retainer</div>
+                <div class="p-amount">15.000<span> kr /mån</span></div>
+                <div class="p-desc">Löpande optimering och utveckling för växande behov.</div>
+                <div class="p-divider"></div>
+                <ul class="p-features">
+                    <li>Nya arbetsflöden</li>
+                    <li>Optimering & underhåll</li>
+                    <li>Prioriterad support</li>
+                    <li>Månatlig genomgång</li>
+                    <li>Utökade integrationer</li>
+                </ul>
+                <button class="p-btn ghost">Kontakta oss</button>
+            </div>
+        </div>
+    </section>
+    <div class="divider container"></div>
+    <!-- TESTIMONIALS -->
+    <section class="testimonials container" id="testimonials">
+        <div class="testimonials-header reveal">
+            <div class="label">Omdömen</div>
+            <h2 class="display" style="margin-top:20px">Vad kunderna <em>säger</em></h2>
+        </div>
+        <div class="test-grid">
+            <div class="test-card reveal">
+                <div class="test-stars">
+                    <svg class="star" viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
+                    <svg class="star" viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
+                    <svg class="star" viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
+                    <svg class="star" viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
+                    <svg class="star" viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
+                </div>
+                <p class="test-quote">"Father & Sons Tech levererade exakt vad vi behövde. Våra AI-automationer sparar nu 20+ timmar per vecka."</p>
+                <div class="test-author">
+                    <div class="test-avatar">EL</div>
+                    <div><div class="test-name">Erik Lindqvist</div><div class="test-role">CTO, Startup Stockholm</div></div>
+                </div>
+            </div>
+            <div class="test-card reveal reveal-d1">
+                <div class="test-stars">
+                    <svg class="star" viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
+                    <svg class="star" viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
+                    <svg class="star" viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
+                    <svg class="star" viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
+                    <svg class="star" viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
+                </div>
+                <p class="test-quote">"OpenClaw-expertis utöver det vanliga. De förstod våra behov och byggde lösningar som verkligen fungerar."</p>
+                <div class="test-author">
+                    <div class="test-avatar">AS</div>
+                    <div><div class="test-name">Anna Svensson</div><div class="test-role">VD, TechGroup AB</div></div>
+                </div>
+            </div>
+            <div class="test-card reveal reveal-d2">
+                <div class="test-stars">
+                    <svg class="star" viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
+                    <svg class="star" viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
+                    <svg class="star" viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
+                    <svg class="star" viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
+                    <svg class="star" viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/></svg>
+                </div>
+                <p class="test-quote">"Bästa investeringen vi gjort i år. ROI:n syntes redan efter första månaden."</p>
+                <div class="test-author">
+                    <div class="test-avatar">MK</div>
+                    <div><div class="test-name">Marcus Karlsson</div><div class="test-role">COO, Innovate Stockholm</div></div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Achievements Section -->
-    <section id="achievements" class="section achievements">
-        <div class="container">
-            <h2 class="section-title">Trusted by <span class="accent">Tech Enthusiasts</span></h2>
-            <p class="section-subtitle">Our community continues to grow as more readers discover the value of AI-powered tech journalism</p>
-            <div class="achievements-grid">
-                <div class="achievement-card fade-in">
-                    <div class="achievement-icon">📚</div>
-                    <div class="achievement-number" data-target="500">0</div>
-                    <div class="achievement-label">+ Articles Published</div>
-                    <div class="achievement-growth">↑ 150% this year</div>
+    <div class="divider container"></div>
+    <!-- FAQ -->
+    <section class="faq container" id="faq">
+        <div class="faq-layout">
+            <div class="faq-left reveal">
+                <div class="label">FAQ</div>
+                <h2 class="display" style="margin-top:20px">Vanliga <em>frågor</em></h2>
+                <p>Hittar du inte svaret? Kontakta oss direkt så svarar vi inom 24 timmar.</p>
+            </div>
+            <div class="faq-list reveal reveal-d1">
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">Vad gör Father & Sons Tech unikt?<span class="faq-arrow">▾</span></div>
+                    <div class="faq-a"><p>Vi kombinerar djup OpenClaw-expertis med affärsförståelse. Vi bygger inte bara verktyg — vi levererar resultat som kan mätas.</p></div>
                 </div>
-                <div class="achievement-card fade-in">
-                    <div class="achievement-icon">👥</div>
-                    <div class="achievement-number" data-target="50">0</div>
-                    <div class="achievement-label">K+ Monthly Readers</div>
-                    <div class="achievement-growth">↑ 200% growth</div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">Hur lång tid tar en implementation?<span class="faq-arrow">▾</span></div>
+                    <div class="faq-a"><p>De flesta projekt är klara inom 2-4 veckor. Komplexa lösningar kan ta längre. Vi ger dig alltid en realistisk tidsplan vid konsultationen.</p></div>
                 </div>
-                <div class="achievement-card fade-in">
-                    <div class="achievement-icon">📧</div>
-                    <div class="achievement-number" data-target="15">0</div>
-                    <div class="achievement-label">K+ Newsletter Subscribers</div>
-                    <div class="achievement-growth">↑ 85% this quarter</div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">Kan ni integrera med våra befintliga system?<span class="faq-arrow">▾</span></div>
+                    <div class="faq-a"><p>Absolut. Vi har erfarenhet av API-integrationer, databaser, CRM-system, chattjänster och mer. Vi anpassar lösningen efter era behov.</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">Erbjuder ni utbildning?<span class="faq-arrow">▾</span></div>
+                    <div class="faq-a"><p>Ja, varje projekt inkluderar dokumentation och utbildning för ert team. Vi säkerställer att ni kan förvalta lösningen själva.</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">Finns pengarna-tillbaka-garanti?<span class="faq-arrow">▾</span></div>
+                    <div class="faq-a"><p>Vi erbjuder 14 dagars full återbetalning på konsultationer. För projekt tar vi endast betalt efter godkännande av projektplan.</p></div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="section pricing">
-        <div class="container">
-            <h2 class="section-title">Flexible <span class="accent">Plans</span></h2>
-            <p class="section-subtitle">Choose the plan that fits your needs</p>
-            <div class="pricing-grid">
-                <div class="pricing-card fade-in">
-                    <div class="pricing-header">
-                        <h3 class="pricing-name">Free</h3>
-                        <div class="pricing-price">$0<span>/mo</span></div>
-                    </div>
-                    <ul class="pricing-features">
-                        <li>Daily headlines delivered</li>
-                        <li>Basic article access</li>
-                        <li>Community forum access</li>
-                    </ul>
-                    <button class="pricing-btn">Get Started</button>
-                </div>
-                <div class="pricing-card featured fade-in">
-                    <div class="pricing-header">
-                        <h3 class="pricing-name">Pro</h3>
-                        <div class="pricing-price">$19<span>/mo</span></div>
-                    </div>
-                    <ul class="pricing-features">
-                        <li>Everything in Free</li>
-                        <li>Full article access</li>
-                        <li>AI-powered summaries</li>
-                        <li>Weekly newsletter</li>
-                        <li>Early access to reports</li>
-                    </ul>
-                    <button class="pricing-btn">Start Free Trial</button>
-                </div>
-                <div class="pricing-card fade-in">
-                    <div class="pricing-header">
-                        <h3 class="pricing-name">Premium</h3>
-                        <div class="pricing-price">$39<span>/mo</span></div>
-                    </div>
-                    <ul class="pricing-features">
-                        <li>Everything in Pro</li>
-                        <li>Exclusive deep-dive reports</li>
-                        <li>Direct author access</li>
-                        <li>Monthly webinars</li>
-                        <li>Priority support</li>
-                    </ul>
-                    <button class="pricing-btn">Get Premium</button>
-                </div>
+    <!-- CTA -->
+    <section class="cta-section container">
+        <div class="cta-box reveal">
+            <h2 class="display">Redo att <em>automatisera</em>?</h2>
+            <p>Boka en gratis konsultation så går vi igenom hur OpenClaw kan effektivisera ert företag.</p>
+            <div class="cta-input-row">
+                <input type="email" class="cta-input" placeholder="din@email.com">
+                <button class="cta-submit">Boka konsultation</button>
             </div>
         </div>
     </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="section testimonials">
-        <div class="container">
-            <h2 class="section-title">What <span class="accent">Readers</span> Say</h2>
-            <p class="section-subtitle">Join thousands of tech enthusiasts who trust us for AI news</p>
-            <div class="testimonials-container">
-                <div class="testimonials-track">
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p class="testimonial-quote">"Father & Sons Tech has become my go-to source for AI news. The AI summaries save me hours every week."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <div class="testimonial-avatar">JD</div>
-                            <div class="testimonial-info">
-                                <h4>John Doe</h4>
-                                <p>Software Engineer</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p class="testimonial-quote">"The depth of analysis here is unmatched. Finally, tech journalism that actually explains the 'why' behind the news."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <div class="testimonial-avatar">SM</div>
-                            <div class="testimonial-info">
-                                <h4>Sarah Miller</h4>
-                                <p>Product Manager</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p class="testimonial-quote">"As a developer, I appreciate the technical accuracy. The tutorials are well-researched and practical."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <div class="testimonial-avatar">AK</div>
-                            <div class="testimonial-info">
-                                <h4>Alex Kim</h4>
-                                <p>ML Engineer</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p class="testimonial-quote">"The premium reports have given me insights I couldn't find anywhere else. Worth every penny."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <div class="testimonial-avatar">RL</div>
-                            <div class="testimonial-info">
-                                <h4>Rachel Lee</h4>
-                                <p>Tech Investor</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p class="testimonial-quote">"Clean design, quality content, no fluff. Exactly what I need to stay informed in a busy world."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <div class="testimonial-avatar">MP</div>
-                            <div class="testimonial-info">
-                                <h4>Mike Peterson</h4>
-                                <p>CTO</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p class="testimonial-quote">"The daily newsletter is perfectly curated. It never feels overwhelming but always keeps me updated."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <div class="testimonial-avatar">EW</div>
-                            <div class="testimonial-info">
-                                <h4>Emma Wilson</h4>
-                                <p>Data Scientist</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-nav">
-                    <span class="testimonial-dot active" data-index="0"></span>
-                    <span class="testimonial-dot" data-index="1"></span>
-                    <span class="testimonial-dot" data-index="2"></span>
-                </div>
+    <!-- FOOTER -->
+    <footer class="footer container">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-brand">Father & Sons Tech</div>
+                <p>OpenClaw-experter som bygger framtidens AI-automation. Resultat som talar för sig.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Tjänster</h5>
+                <a href="#">Implementation</a>
+                <a href="#">Konsultation</a>
+                <a href="#">Retainer</a>
+                <a href="#">Utbildning</a>
+            </div>
+            <div class="footer-col">
+                <h5>Resurser</h5>
+                <a href="#">AI-nyheter</a>
+                <a href="#">OpenClaw-guider</a>
+                <a href="#">Blogg</a>
+                <a href="#">Newsletter</a>
+            </div>
+            <div class="footer-col">
+                <h5>Företaget</h5>
+                <a href="#">Om oss</a>
+                <a href="#">Kontakt</a>
+                <a href="#">Integritet</a>
+                <a href="#">Villkor</a>
             </div>
         </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq" class="section faq">
-        <div class="container">
-            <h2 class="section-title">Your Questions <span class="accent">Answered</span></h2>
-            <p class="section-subtitle">Everything you need to know about our platform</p>
-            <div class="faq-list">
-                <div class="faq-item fade-in">
-                    <button class="faq-question">
-                        <span>What makes Father & Sons Tech different from other tech news sites?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            We combine human expertise with AI-powered curation to deliver accurate, in-depth analysis that you won't find anywhere else. Our team of tech journalists and AI specialists work together to bring you stories that truly matter.
-                        </div>
-                    </div>
-                </div>
-                <div class="faq-item fade-in">
-                    <button class="faq-question">
-                        <span>Can I try before subscribing to a paid plan?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            Yes! Our Free plan gives you access to daily headlines and basic articles. We also offer a 7-day free trial for our Pro plan so you can experience all premium features before committing.
-                        </div>
-                    </div>
-                </div>
-                <div class="faq-item fade-in">
-                    <button class="faq-question">
-                        <span>How does the AI-powered content curation work?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            Our AI system scans thousands of sources daily to identify the most relevant and impactful stories. Human editors then verify and contextualize this information to ensure accuracy and depth.
-                        </div>
-                    </div>
-                </div>
-                <div class="faq-item fade-in">
-                    <button class="faq-question">
-                        <span>Can I cancel my subscription at any time?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            Absolutely. You can cancel your subscription at any time from your account settings. You'll continue to have access until the end of your billing period.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <a href="#" class="logo">Father & Sons <span class="accent">Tech</span></a>
-                    <p>Your trusted source for AI and technology news, delivering insights that matter.</p>
-                    <div class="footer-newsletter">
-                        <h4>Subscribe to our newsletter</h4>
-                        <form onsubmit="event.preventDefault(); alert('Thanks for subscribing!');">
-                            <input type="email" placeholder="Enter your email" required>
-                            <button type="submit">Subscribe</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Press</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="#">Latest News</a></li>
-                        <li><a href="#">Tutorials</a></li>
-                        <li><a href="#">Reports</a></li>
-                        <li><a href="#">Newsletter</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Cookie Policy</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Father & Sons Tech. All rights reserved.</p>
-                <div class="footer-social">
-                    <a href="#" title="Twitter">𝕏</a>
-                    <a href="#" title="LinkedIn">in</a>
-                    <a href="#" title="GitHub">⌘</a>
-                </div>
-            </div>
+        <div class="footer-bottom">
+            <span>© 2026 Father & Sons Tech. Alla rättigheter reserverade.</span>
+            <span>Byggt med OpenClaw</span>
         </div>
     </footer>
-
     <script>
-        // Mobile Navigation Toggle
-        const mobileToggle = document.querySelector('.mobile-toggle');
-        const mobileNav = document.querySelector('.mobile-nav');
-
-        mobileToggle.addEventListener('click', () => {
-            mobileNav.classList.toggle('active');
-            mobileToggle.classList.toggle('active');
+        const nav=document.getElementById('nav');
+        window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>40)});
+        function toggleFaq(el){el.parentElement.classList.toggle('open')}
+        const data=[12,18,15,24,28,35,42,48,55,62,78,95];
+        const mo=['Jan','Feb','Mar','Apr','Maj','Jun','Jul','Aug','Sep','Okt','Nov','Dec'];
+        const mx=Math.max(...data);
+        const ca=document.getElementById('chartArea');
+        const cl=document.getElementById('chartLabels');
+        data.forEach((v,i)=>{
+            const b=document.createElement('div');
+            b.className='c-bar';
+            b.style.height=(v/mx*100)+'%';
+            b.style.background=i>=10 ?'linear-gradient(180deg,var(--accent),rgba(212,168,83,0.15))' :'linear-gradient(180deg,rgba(255,255,255,0.08),rgba(255,255,255,0.02))';
+            b.innerHTML=`<span class="c-tip">${v}</span>`;
+            ca.appendChild(b);
+            const l=document.createElement('span');
+            l.textContent=mo[i];
+            cl.appendChild(l);
         });
-
-        // Smooth Scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                    mobileNav.classList.remove('active');
-                }
-            });
-        });
-
-        // FAQ Accordion
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', () => {
-                const item = button.parentElement;
-                const isActive = item.classList.contains('active');
-
-                // Close all items
-                document.querySelectorAll('.faq-item').forEach(faq => {
-                    faq.classList.remove('active');
-                });
-
-                // Open clicked item if it wasn't active
-                if (!isActive) {
-                    item.classList.add('active');
-                }
-            });
-        });
-
-        // Animated Counters
-        function animateCounter(element, target, duration = 2000) {
-            let start = 0;
-            const increment = target / (duration / 16);
-
-            function update() {
-                start += increment;
-                if (start < target) {
-                    element.textContent = Math.floor(start).toLocaleString() + (element.dataset.suffix || '+');
-                    requestAnimationFrame(update);
-                } else {
-                    element.textContent = target.toLocaleString() + (element.dataset.suffix || '+');
-                }
-            }
-
-            update();
-        }
-
-        // Testimonials Carousel
-        const track = document.querySelector('.testimonials-track');
-        const dots = document.querySelectorAll('.testimonial-dot');
-        let currentSlide = 0;
-
-        function updateCarousel() {
-            const cardWidth = document.querySelector('.testimonial-card').offsetWidth + 24;
-            track.style.transform = `translateX(-${currentSlide * cardWidth}px)`;
-
-            dots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentSlide);
+        const mc=document.getElementById('miniChart');
+        if(mc){
+            const mini=[28,35,42,48,55,62,70,78,85,92,105,118];
+            const mmx=Math.max(...mini);
+            mini.forEach((v,i)=>{
+                const b=document.createElement('div');
+                b.className='b-visual-bar';
+                b.style.height=(v/mmx*100)+'%';
+                if(i>=10)b.style.background='linear-gradient(180deg,var(--accent),rgba(212,168,83,0.2))';
+                else b.style.background='linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02))';
+                mc.appendChild(b);
             });
         }
-
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                currentSlide = index;
-                updateCarousel();
-            });
-        });
-
-        // Intersection Observer for Animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-
-                    // Trigger counter animation for achievement cards
-                    if (entry.target.classList.contains('achievement-card')) {
-                        const counter = entry.target.querySelector('.achievement-number');
-                        if (counter && !counter.dataset.animated) {
-                            counter.dataset.animated = 'true';
-                            const target = parseInt(counter.dataset.target);
-                            animateCounter(counter, target);
-                        }
-                    }
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Auto-advance testimonials
-        setInterval(() => {
-            currentSlide = (currentSlide + 1) % 3;
-            updateCarousel();
-        }, 5000);
-
-        // Navbar scroll effect
-        let lastScroll = 0;
-        const navbar = document.querySelector('.navbar');
-
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-
-            if (currentScroll > 100) {
-                navbar.style.background = 'rgba(10, 10, 10, 0.98)';
-            } else {
-                navbar.style.background = 'rgba(10, 10, 10, 0.8)';
-            }
-
-            lastScroll = currentScroll;
-        });
+        const obs=new IntersectionObserver(entries=>{ entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')}); },{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
+        document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
     </script>
 </body>
 </html>
